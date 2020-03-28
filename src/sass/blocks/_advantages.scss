@@ -30,8 +30,14 @@
         }
     }
     &__icon {
-        &_animated {
+        &_animated-heart {
             animation: heartbeat 1s ease infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+        &_animated-cup {
+            animation: cup 0.5s linear infinite alternate;
             &:hover {
                 animation-play-state: paused;
             }

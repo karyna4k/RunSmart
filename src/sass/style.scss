@@ -4,16 +4,38 @@
 @import 'libs/animate';
 @import 'base/variables';
 @import 'base/animations';
-* {
-    font-family: 'Museo Sans Cyrl', serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: 'Museo Sans Cyrl', serif;
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 .container {
-    /* вместо колоночной верстки */
-    position: relative;
-    width: 950px;
-    margin: 0 auto;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: 991px) {
+    padding: 0 15px;
+  }
 }
+
 
 @import 'blocks/promo';
 @import 'blocks/header';
